@@ -8,20 +8,24 @@ RPM packages for RHEL / CentOS 7
 
 ##### Install Kurento RPM packages with required dependencies
 
-1. `yum install https://get.pkgs.cloud/release/pkgs.cloud-release-1.0.rpm -y`
+1. Install [**pkgs.cloud** release repository](https://github.com/pkgs-cloud/release)
 2. `yum install kurento-release -y`
 3. `yum install kms -y`
 
 ##### List all available packages
 
-- `yum --disablerepo="*" --enablerepo="pkgs.cloud-kurento" list available`
+```bash
+yum --disablerepo="*" --enablerepo="pkgs.cloud-kurento" list available
+```
 
 ##### Additional (optional) Kurento filters
 
-- `yum install kms-filters-chroma -y`
-- `yum install kms-filters-crowddetector -y`
-- `yum install kms-filters-platedetector -y`
-- `yum install kms-filters-pointerdetector -y`
+```bash
+yum install kms-filters-chroma -y
+yum install kms-filters-crowddetector -y
+yum install kms-filters-platedetector -y
+yum install kms-filters-pointerdetector -y
+```
 
 ### Usage
 
@@ -66,9 +70,9 @@ Log level can be set in `/etc/sysconfig/kms`
 
 ### Help with RPM packages
 
-- [Open an issue](https://github.com/pkgs-cloud/kurento/issues)
+- [Open an issue](https://github.com/pkgs-cloud/release/issues)
 
---
+---
 
 ##### DISCLAIMER
 
