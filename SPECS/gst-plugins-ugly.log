@@ -1,0 +1,1682 @@
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.nFzxJO
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd /root/rpmbuild/BUILD
++ rm -rf gst-plugins-ugly-kms6.6.0
++ /usr/bin/gzip -dc /root/rpmbuild/SOURCES/gst-plugins-ugly-kms6.6.0.tar.gz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd gst-plugins-ugly-kms6.6.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.Mk36Wr
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd gst-plugins-ugly-kms6.6.0
++ ./autogen.sh
++ Setting up common submodule
+Submodule 'common' (git://anongit.freedesktop.org/gstreamer/common) registered for path 'common'
+Cloning into 'common'...
+Submodule path 'common': checked out '6f2d2093e84cc0eb99b634fa281822ebb9507285'
++ check for build tools
+  checking for autoreconf ... 
+/usr/bin/autoreconf
+  checking for pkg-config ... 
+/usr/bin/pkg-config
++ checking for autogen.sh options
+  This autogen script will automatically run ./configure as:
+  ./configure --enable-maintainer-mode --enable-gtk-doc
+  To pass any additional options, please specify them on the ./autogen.sh
+  command line.
++ running autopoint --force...
+Copying file ABOUT-NLS
+Copying file config.rpath
+Copying file m4/codeset.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+libtoolize: putting auxiliary files in `.'.
+libtoolize: copying file `./ltmain.sh'
+libtoolize: putting macros in `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+libtoolize: Remember to add `LT_INIT' to configure.ac.
+libtoolize: Consider adding `AC_CONFIG_MACRO_DIR([m4])' to configure.ac and
+libtoolize: rerunning libtoolize, to keep the correct libtool macros in-tree.
+configure.ac:62: warning: The 'AM_PROG_MKDIR_P' macro is deprecated, and its use is discouraged.
+configure.ac:62: You should use the Autoconf-provided 'AC_PROG_MKDIR_P' macro instead,
+configure.ac:62: and use '$(MKDIR_P)' instead of '$(mkdir_p)'in your Makefile.am files.
+configure.ac:45: installing './compile'
+configure.ac:10: installing './config.guess'
+configure.ac:10: installing './config.sub'
+configure.ac:13: installing './install-sh'
+configure.ac:13: installing './missing'
+Makefile.am: installing './INSTALL'
+ext/a52dec/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
++ running configure ... 
+  default flags:  --enable-maintainer-mode --enable-gtk-doc
+
+./configure --enable-maintainer-mode --enable-gtk-doc
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking nano version... 1
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by GCC... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+DOMAIN = gst-plugins-ugly-1.5
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for VALGRIND... yes
+configure: Using extra code paths for valgrind
+configure: Using GStreamer Ugly Plug-ins git as package name
+configure: Using Unknown package origin as package origin
+
+configure: *** checking feature: building of plug-ins with external deps ***
+configure: building external plug-ins
+
+configure: *** checking feature: building of experimental plug-ins ***
+configure: not building experimental plug-ins
+checking whether byte ordering is bigendian... no
+checking whether byte ordering is bigendian... (cached) no
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for g++... yes
+checking for valgrind... /usr/bin/valgrind
+checking for working do while(0) macros... yes
+checking for gtkdoc-check... /usr/bin/gtkdoc-check
+checking for gtkdoc-rebase... /usr/bin/gtkdoc-rebase
+checking for gtkdoc-mkpdf... /usr/bin/gtkdoc-mkpdf
+checking for GTKDOC_DEPS... yes
+checking whether to build gtk-doc documentation... yes
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib64/python2.7/site-packages
+checking whether to build plugin documentation... yes
+checking for cos in -lm... yes
+checking for stdint types... stdint.h (shortcircuit)
+make use of stdint.h in _stdint.h (assuming C99 compatible system)
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking whether gcc -std=gnu99 implements __PRETTY_FUNCTION__... yes
+checking whether gcc -std=gnu99 implements __FUNCTION__... yes
+checking whether gcc -std=gnu99 implements __func__... yes
+checking for GLIB... yes
+checking for glib-genmarshal... glib-genmarshal (from pkg-config path)
+checking for glib-mkenums... glib-mkenums
+checking for GIO... yes
+checking for ORC... yes
+checking for usable orcc... /usr/bin/orcc
+checking for GST... yes
+configure: using GStreamer tools in /usr/bin
+configure: using GStreamer plug-ins in /usr/lib64/gstreamer-1.5
+checking for GST_BASE... yes
+checking for GST_CHECK... yes
+checking for GST_PLUGINS_BASE... yes
+configure: using GStreamer Base Plugins in /usr/lib64/gstreamer-1.5
+checking for GMODULE_NO_EXPORT... yes
+checking for -Bsymbolic-functions linker flag... yes
+configure: Using /usr/local/lib/gstreamer-1.5 as the plugin install location
+configure: Setting GST_PACKAGE_RELEASE_DATETIME to 2017-10-27T14:54Z
+checking whether to build static plugins or not... no
+checking to see if compiler understands -Wall... yes
+checking to see if compiler understands -Wdeclaration-after-statement... yes
+checking to see if compiler understands -Wvla... yes
+checking to see if compiler understands -Wpointer-arith... yes
+checking to see if compiler understands -Wmissing-declarations... yes
+checking to see if compiler understands -Wmissing-prototypes... yes
+checking to see if compiler understands -Wredundant-decls... yes
+checking to see if compiler understands -Wwrite-strings... yes
+checking to see if compiler understands -Wformat-nonliteral... yes
+checking to see if compiler understands -Wformat-security... yes
+checking to see if compiler understands -Wold-style-definition... yes
+checking to see if compiler understands -Winit-self... yes
+checking to see if compiler understands -Wmissing-include-dirs... yes
+checking to see if compiler understands -Waddress... yes
+checking to see if compiler understands -Waggregate-return... yes
+checking to see if compiler understands -Wno-multichar... yes
+checking to see if compiler understands -Wnested-externs... yes
+configure: set WARNING_CFLAGS to  -Wall -Wdeclaration-after-statement -Wvla -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wwrite-strings -Wformat-nonliteral -Wformat-security -Wold-style-definition -Winit-self -Wmissing-include-dirs -Waddress -Waggregate-return -Wno-multichar -Wnested-externs
+configure: set ERROR_CFLAGS to 
+checking to see if c++ compiler understands ... yes
+checking to see if c++ compiler understands -Wall... yes
+checking to see if c++ compiler understands -Wmissing-declarations... yes
+checking to see if c++ compiler understands -Wredundant-decls... yes
+checking to see if c++ compiler understands -Wwrite-strings... yes
+checking to see if c++ compiler understands -Wformat-nonliteral... yes
+checking to see if c++ compiler understands -Wformat-security... yes
+checking to see if c++ compiler understands -Winit-self... yes
+checking to see if c++ compiler understands -Wmissing-include-dirs... yes
+checking to see if c++ compiler understands -Waddress... yes
+checking to see if c++ compiler understands -Waggregate-return... yes
+checking to see if c++ compiler understands -Wno-multichar... yes
+configure: set WARNING_CXXFLAGS to  -Wall -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Waggregate-return -Wno-multichar
+configure: set ERROR_CXXFLAGS to 
+configure: Using autoaudiosink as default audio sink
+configure: Using alsasrc as default audio source
+configure: Using autovideosink as default video sink
+configure: Using v4l2src as default video source
+configure: Using goom as default visualizer
+checking winsock2.h usability... no
+checking winsock2.h presence... no
+checking for winsock2.h... no
+
+configure: Checking libraries for plugins in ext/
+
+
+configure: *** checking feature: a52dec ***
+configure: *** for plug-ins: a52dec ***
+checking for a52_init in -la52... yes
+checking a52dec/a52.h usability... yes
+checking a52dec/a52.h presence... yes
+checking for a52dec/a52.h... yes
+configure: *** These plugins will be built: a52dec
+
+configure: *** checking feature: amrnb library ***
+configure: *** for plug-ins: amrnb ***
+checking for AMRNB... yes
+configure: *** These plugins will be built: amrnb
+
+configure: *** checking feature: amrwb library ***
+configure: *** for plug-ins: amrwbdec ***
+checking for AMRWB... yes
+configure: *** These plugins will be built: amrwbdec
+
+configure: *** checking feature: cdio library ***
+configure: *** for plug-ins: cdio ***
+checking for CDIO... yes
+configure: *** These plugins will be built: cdio
+
+configure: *** checking feature: dvdread library ***
+configure: *** for plug-ins: dvdreadsrc ***
+checking for DVDOpen in -ldvdread... no
+configure: *** These plugins will not be built: dvdreadsrc
+
+configure: *** checking feature: lame mp3 encoder library ***
+configure: *** for plug-ins: lame ***
+checking for lame_init in -lmp3lame... yes
+checking lame/lame.h usability... yes
+checking lame/lame.h presence... yes
+checking for lame/lame.h... yes
+configure: *** These plugins will be built: lame
+
+configure: *** checking feature: mad mp3 decoder ***
+configure: *** for plug-ins: mad ***
+checking for MAD... yes
+configure: *** These plugins will be built: mad
+
+configure: *** checking feature: mpeg2dec ***
+configure: *** for plug-ins: mpeg2dec ***
+checking for MPEG2DEC... no
+configure: No package 'libmpeg2' found
+configure: *** These plugins will not be built: mpeg2dec
+
+configure: *** checking feature: mpg123 audio decoder ***
+configure: *** for plug-ins: mpg123 ***
+checking for MPG123... no
+configure: *** These plugins will not be built: mpg123
+
+configure: *** checking feature: libsidplay ***
+configure: *** for plug-ins: sid ***
+checking for libsidplay 1.36.x... checking sidplay/player.h usability... no
+checking sidplay/player.h presence... no
+checking for sidplay/player.h... no
+configure: *** These plugins will not be built: sid
+
+configure: *** checking feature: twolame ***
+configure: *** for plug-ins: twolame ***
+checking for TWOLAME... no
+configure: *** These plugins will not be built: twolame
+
+configure: *** checking feature: x264 plug-in ***
+configure: *** for plug-ins: x264 ***
+checking for X264... yes
+configure: *** These plugins will be built: x264
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating common/Makefile
+config.status: creating common/m4/Makefile
+config.status: creating gst-libs/Makefile
+config.status: creating gst-libs/gst/Makefile
+config.status: creating gst/Makefile
+config.status: creating gst/asfdemux/Makefile
+config.status: creating gst/dvdlpcmdec/Makefile
+config.status: creating gst/dvdsub/Makefile
+config.status: creating gst/realmedia/Makefile
+config.status: creating gst/xingmux/Makefile
+config.status: creating ext/Makefile
+config.status: creating ext/a52dec/Makefile
+config.status: creating ext/amrnb/Makefile
+config.status: creating ext/amrwbdec/Makefile
+config.status: creating ext/cdio/Makefile
+config.status: creating ext/dvdread/Makefile
+config.status: creating ext/lame/Makefile
+config.status: creating ext/mad/Makefile
+config.status: creating ext/mpeg2dec/Makefile
+config.status: creating ext/mpg123/Makefile
+config.status: creating ext/sidplay/Makefile
+config.status: creating ext/twolame/Makefile
+config.status: creating ext/x264/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/plugins/Makefile
+config.status: creating docs/version.entities
+config.status: creating tests/Makefile
+config.status: creating tests/check/Makefile
+config.status: creating tests/files/Makefile
+config.status: creating m4/Makefile
+config.status: creating po/Makefile.in
+config.status: creating pkgconfig/Makefile
+config.status: creating pkgconfig/gstreamer-plugins-ugly-uninstalled.pc
+config.status: creating gst-plugins-ugly.spec
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing _stdint.h commands
+config.status: creating _stdint.h : _GST_PLUGINS_UGLY__STDINT_H
+configure: *** Plug-ins without external dependencies that will be built:
+	asfdemux
+	dvdlpcmdec
+	dvdsub
+	realmedia
+	xingmux
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+
+configure: *** Plug-ins that have NOT been ported:
+
+configure: *** Plug-ins with dependencies that will be built:
+	a52dec
+	amrnb
+	amrwbdec
+	cdio
+	lame
+	mad
+	x264
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	dvdreadsrc
+	mpeg2dec
+	mpg123
+	sid
+	twolame
+
+configure: *** Orc acceleration enabled.
+
+Now type 'make' to compile gst-plugins-ugly.
++ CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
++ export CFLAGS
++ CXXFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic'
++ export CXXFLAGS
++ FFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FFLAGS
++ FCFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FCFLAGS
++ LDFLAGS='-Wl,-z,relro '
++ export LDFLAGS
++ '[' 1 == 1 ']'
++ '[' x86_64 == ppc64le ']'
+++ find . -name config.guess -o -name config.sub
++ for i in '$(find . -name config.guess -o -name config.sub)'
+++ basename ./config.guess
++ '[' -f /usr/lib/rpm/redhat/config.guess ']'
++ /usr/bin/rm -f ./config.guess
+++ basename ./config.guess
++ /usr/bin/cp -fv /usr/lib/rpm/redhat/config.guess ./config.guess
+'/usr/lib/rpm/redhat/config.guess' -> './config.guess'
++ for i in '$(find . -name config.guess -o -name config.sub)'
+++ basename ./config.sub
++ '[' -f /usr/lib/rpm/redhat/config.sub ']'
++ /usr/bin/rm -f ./config.sub
+++ basename ./config.sub
++ /usr/bin/cp -fv /usr/lib/rpm/redhat/config.sub ./config.sub
+'/usr/lib/rpm/redhat/config.sub' -> './config.sub'
++ ./configure --build=x86_64-redhat-linux-gnu --host=x86_64-redhat-linux-gnu --program-prefix= --disable-dependency-tracking --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --enable-debug
+checking build system type... x86_64-redhat-linux-gnu
+checking host system type... x86_64-redhat-linux-gnu
+checking target system type... x86_64-redhat-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking nano version... 1
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for x86_64-redhat-linux-gnu-gcc... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-redhat-linux-gnu file names to x86_64-redhat-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-redhat-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for x86_64-redhat-linux-gnu-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-redhat-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-redhat-linux-gnu-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-redhat-linux-gnu-strip... no
+checking for strip... strip
+checking for x86_64-redhat-linux-gnu-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for x86_64-redhat-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by GCC... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+DOMAIN = gst-plugins-ugly-1.5
+checking for x86_64-redhat-linux-gnu-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for VALGRIND... yes
+configure: Using extra code paths for valgrind
+configure: Using GStreamer Ugly Plug-ins git as package name
+configure: Using Unknown package origin as package origin
+
+configure: *** checking feature: building of plug-ins with external deps ***
+configure: building external plug-ins
+
+configure: *** checking feature: building of experimental plug-ins ***
+configure: not building experimental plug-ins
+checking whether byte ordering is bigendian... no
+checking whether byte ordering is bigendian... (cached) no
+checking for x86_64-redhat-linux-gnu-gcc... gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) none
+checking for gcc option to accept ISO C99... -std=gnu99
+checking for gcc -std=gnu99 option to accept ISO Standard C... (cached) -std=gnu99
+checking for x86_64-redhat-linux-gnu-g++... no
+checking for x86_64-redhat-linux-gnu-c++... no
+checking for x86_64-redhat-linux-gnu-gpp... no
+checking for x86_64-redhat-linux-gnu-aCC... no
+checking for x86_64-redhat-linux-gnu-CC... no
+checking for x86_64-redhat-linux-gnu-cxx... no
+checking for x86_64-redhat-linux-gnu-cc++... no
+checking for x86_64-redhat-linux-gnu-cl.exe... no
+checking for x86_64-redhat-linux-gnu-FCC... no
+checking for x86_64-redhat-linux-gnu-KCC... no
+checking for x86_64-redhat-linux-gnu-RCC... no
+checking for x86_64-redhat-linux-gnu-xlC_r... no
+checking for x86_64-redhat-linux-gnu-xlC... no
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for g++... yes
+checking for valgrind... /usr/bin/valgrind
+checking for working do while(0) macros... yes
+checking for gtkdoc-check... /usr/bin/gtkdoc-check
+checking for gtkdoc-rebase... /usr/bin/gtkdoc-rebase
+checking for gtkdoc-mkpdf... /usr/bin/gtkdoc-mkpdf
+checking whether to build gtk-doc documentation... no
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib64/python2.7/site-packages
+checking whether to build plugin documentation... no (gtk-doc disabled or not available)
+checking for cos in -lm... yes
+checking for stdint types... stdint.h (shortcircuit)
+make use of stdint.h in _stdint.h (assuming C99 compatible system)
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking whether gcc -std=gnu99 implements __PRETTY_FUNCTION__... yes
+checking whether gcc -std=gnu99 implements __FUNCTION__... yes
+checking whether gcc -std=gnu99 implements __func__... yes
+checking for GLIB... yes
+checking for glib-genmarshal... glib-genmarshal (from pkg-config path)
+checking for glib-mkenums... glib-mkenums
+checking for GIO... yes
+checking for ORC... yes
+checking for usable orcc... /usr/bin/orcc
+checking for GST... yes
+configure: using GStreamer tools in /usr/bin
+configure: using GStreamer plug-ins in /usr/lib64/gstreamer-1.5
+checking for GST_BASE... yes
+checking for GST_CHECK... yes
+checking for GST_PLUGINS_BASE... yes
+configure: using GStreamer Base Plugins in /usr/lib64/gstreamer-1.5
+checking for GMODULE_NO_EXPORT... yes
+checking for -Bsymbolic-functions linker flag... yes
+configure: Using /usr/lib64/gstreamer-1.5 as the plugin install location
+configure: Setting GST_PACKAGE_RELEASE_DATETIME to 2017-10-27T14:54Z
+checking whether to build static plugins or not... no
+checking to see if compiler understands -Wall... yes
+checking to see if compiler understands -Wdeclaration-after-statement... yes
+checking to see if compiler understands -Wvla... yes
+checking to see if compiler understands -Wpointer-arith... yes
+checking to see if compiler understands -Wmissing-declarations... yes
+checking to see if compiler understands -Wmissing-prototypes... yes
+checking to see if compiler understands -Wredundant-decls... yes
+checking to see if compiler understands -Wwrite-strings... yes
+checking to see if compiler understands -Wformat-nonliteral... yes
+checking to see if compiler understands -Wformat-security... yes
+checking to see if compiler understands -Wold-style-definition... yes
+checking to see if compiler understands -Winit-self... yes
+checking to see if compiler understands -Wmissing-include-dirs... yes
+checking to see if compiler understands -Waddress... yes
+checking to see if compiler understands -Waggregate-return... yes
+checking to see if compiler understands -Wno-multichar... yes
+checking to see if compiler understands -Wnested-externs... yes
+configure: set WARNING_CFLAGS to  -Wall -Wdeclaration-after-statement -Wvla -Wpointer-arith -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wwrite-strings -Wformat-nonliteral -Wformat-security -Wold-style-definition -Winit-self -Wmissing-include-dirs -Waddress -Waggregate-return -Wno-multichar -Wnested-externs
+configure: set ERROR_CFLAGS to 
+checking to see if c++ compiler understands ... yes
+checking to see if c++ compiler understands -Wall... yes
+checking to see if c++ compiler understands -Wmissing-declarations... yes
+checking to see if c++ compiler understands -Wredundant-decls... yes
+checking to see if c++ compiler understands -Wwrite-strings... yes
+checking to see if c++ compiler understands -Wformat-nonliteral... yes
+checking to see if c++ compiler understands -Wformat-security... yes
+checking to see if c++ compiler understands -Winit-self... yes
+checking to see if c++ compiler understands -Wmissing-include-dirs... yes
+checking to see if c++ compiler understands -Waddress... yes
+checking to see if c++ compiler understands -Waggregate-return... yes
+checking to see if c++ compiler understands -Wno-multichar... yes
+configure: set WARNING_CXXFLAGS to  -Wall -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Waggregate-return -Wno-multichar
+configure: set ERROR_CXXFLAGS to 
+configure: Using autoaudiosink as default audio sink
+configure: Using alsasrc as default audio source
+configure: Using autovideosink as default video sink
+configure: Using v4l2src as default video source
+configure: Using goom as default visualizer
+checking winsock2.h usability... no
+checking winsock2.h presence... no
+checking for winsock2.h... no
+
+configure: Checking libraries for plugins in ext/
+
+
+configure: *** checking feature: a52dec ***
+configure: *** for plug-ins: a52dec ***
+checking for a52_init in -la52... yes
+checking a52dec/a52.h usability... yes
+checking a52dec/a52.h presence... yes
+checking for a52dec/a52.h... yes
+configure: *** These plugins will be built: a52dec
+
+configure: *** checking feature: amrnb library ***
+configure: *** for plug-ins: amrnb ***
+checking for AMRNB... yes
+configure: *** These plugins will be built: amrnb
+
+configure: *** checking feature: amrwb library ***
+configure: *** for plug-ins: amrwbdec ***
+checking for AMRWB... yes
+configure: *** These plugins will be built: amrwbdec
+
+configure: *** checking feature: cdio library ***
+configure: *** for plug-ins: cdio ***
+checking for CDIO... yes
+configure: *** These plugins will be built: cdio
+
+configure: *** checking feature: dvdread library ***
+configure: *** for plug-ins: dvdreadsrc ***
+checking for DVDOpen in -ldvdread... no
+configure: *** These plugins will not be built: dvdreadsrc
+
+configure: *** checking feature: lame mp3 encoder library ***
+configure: *** for plug-ins: lame ***
+checking for lame_init in -lmp3lame... yes
+checking lame/lame.h usability... yes
+checking lame/lame.h presence... yes
+checking for lame/lame.h... yes
+configure: *** These plugins will be built: lame
+
+configure: *** checking feature: mad mp3 decoder ***
+configure: *** for plug-ins: mad ***
+checking for MAD... yes
+configure: *** These plugins will be built: mad
+
+configure: *** checking feature: mpeg2dec ***
+configure: *** for plug-ins: mpeg2dec ***
+checking for MPEG2DEC... no
+configure: No package 'libmpeg2' found
+configure: *** These plugins will not be built: mpeg2dec
+
+configure: *** checking feature: mpg123 audio decoder ***
+configure: *** for plug-ins: mpg123 ***
+checking for MPG123... no
+configure: *** These plugins will not be built: mpg123
+
+configure: *** checking feature: libsidplay ***
+configure: *** for plug-ins: sid ***
+checking for libsidplay 1.36.x... checking sidplay/player.h usability... no
+checking sidplay/player.h presence... no
+checking for sidplay/player.h... no
+configure: *** These plugins will not be built: sid
+
+configure: *** checking feature: twolame ***
+configure: *** for plug-ins: twolame ***
+checking for TWOLAME... no
+configure: *** These plugins will not be built: twolame
+
+configure: *** checking feature: x264 plug-in ***
+configure: *** for plug-ins: x264 ***
+checking for X264... yes
+configure: *** These plugins will be built: x264
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating common/Makefile
+config.status: creating common/m4/Makefile
+config.status: creating gst-libs/Makefile
+config.status: creating gst-libs/gst/Makefile
+config.status: creating gst/Makefile
+config.status: creating gst/asfdemux/Makefile
+config.status: creating gst/dvdlpcmdec/Makefile
+config.status: creating gst/dvdsub/Makefile
+config.status: creating gst/realmedia/Makefile
+config.status: creating gst/xingmux/Makefile
+config.status: creating ext/Makefile
+config.status: creating ext/a52dec/Makefile
+config.status: creating ext/amrnb/Makefile
+config.status: creating ext/amrwbdec/Makefile
+config.status: creating ext/cdio/Makefile
+config.status: creating ext/dvdread/Makefile
+config.status: creating ext/lame/Makefile
+config.status: creating ext/mad/Makefile
+config.status: creating ext/mpeg2dec/Makefile
+config.status: creating ext/mpg123/Makefile
+config.status: creating ext/sidplay/Makefile
+config.status: creating ext/twolame/Makefile
+config.status: creating ext/x264/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/plugins/Makefile
+config.status: creating docs/version.entities
+config.status: creating tests/Makefile
+config.status: creating tests/check/Makefile
+config.status: creating tests/files/Makefile
+config.status: creating m4/Makefile
+config.status: creating po/Makefile.in
+config.status: creating pkgconfig/Makefile
+config.status: creating pkgconfig/gstreamer-plugins-ugly-uninstalled.pc
+config.status: creating gst-plugins-ugly.spec
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing _stdint.h commands
+config.status: creating _stdint.h : _GST_PLUGINS_UGLY__STDINT_H
+config.status: _stdint.h is unchanged
+configure: *** Plug-ins without external dependencies that will be built:
+	asfdemux
+	dvdlpcmdec
+	dvdsub
+	realmedia
+	xingmux
+
+configure: *** Plug-ins without external dependencies that will NOT be built:
+
+configure: *** Plug-ins that have NOT been ported:
+
+configure: *** Plug-ins with dependencies that will be built:
+	a52dec
+	amrnb
+	amrwbdec
+	cdio
+	lame
+	mad
+	x264
+
+configure: *** Plug-ins with dependencies that will NOT be built:
+	dvdreadsrc
+	mpeg2dec
+	mpg123
+	sid
+	twolame
+
+configure: *** Orc acceleration enabled.
+
++ make -j8
+make  all-recursive
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+Making all in gst-libs
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+Making all in gst
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+Making all in gst
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make -C asfdemux
+make -C dvdlpcmdec
+make -C dvdsub
+make -C xingmux
+make -C realmedia
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+  CC       libgstasf_la-gstasfdemux.lo
+  CC       libgstdvdlpcmdec_la-gstdvdlpcmdec.lo
+  CC       libgstdvdsub_la-gstdvdsubdec.lo
+  CC       libgstxingmux_la-plugin.lo
+  CC       libgstxingmux_la-gstxingmux.lo
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+  CC       libgstasf_la-gstasf.lo
+  CC       libgstdvdsub_la-gstdvdsubparse.lo
+  CC       libgstrmdemux_la-rademux.lo
+  CC       libgstasf_la-asfheaders.lo
+  CC       libgstasf_la-asfpacket.lo
+  CC       libgstasf_la-gstrtpasfdepay.lo
+  CCLD     libgstxingmux.la
+  CCLD     libgstdvdlpcmdec.la
+  CC       libgstasf_la-gstrtspwms.lo
+  CC       libgstrmdemux_la-rmdemux.lo
+  CC       libgstrmdemux_la-rmutils.lo
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+  CC       libgstrmdemux_la-rdtdepay.lo
+  CCLD     libgstdvdsub.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+  CC       libgstrmdemux_la-rdtmanager.lo
+  CC       libgstrmdemux_la-rtspreal.lo
+  CC       libgstrmdemux_la-realhash.lo
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+  CC       libgstrmdemux_la-asmrules.lo
+  CC       libgstrmdemux_la-rdtjitterbuffer.lo
+  CC       libgstrmdemux_la-gstrdtbuffer.lo
+  CC       libgstrmdemux_la-pnmsrc.lo
+  CC       libgstrmdemux_la-realmedia.lo
+  CC       asmrules-asmrules.o
+  CCLD     libgstrmdemux.la
+  CCLD     asmrules
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+  CCLD     libgstasf.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+Making all in asfdemux
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+Making all in dvdlpcmdec
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+Making all in dvdsub
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+Making all in xingmux
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+Making all in realmedia
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+Making all in ext
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make -C a52dec
+make -C amrnb
+make -C amrwbdec
+make -C cdio
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+  CC       libgsta52dec_la-gsta52dec.lo
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+  CC       libgstamrnb_la-amrnb.lo
+  CC       libgstamrnb_la-amrnbdec.lo
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make -C lame
+  CC       libgstamrwbdec_la-amrwb.lo
+  CC       libgstamrnb_la-amrnbenc.lo
+  CC       libgstamrwbdec_la-amrwbdec.lo
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+  CC       libgstlame_la-gstlamemp3enc.lo
+  CC       libgstcdio_la-gstcdio.lo
+  CC       libgstcdio_la-gstcdiocddasrc.lo
+  CC       libgstlame_la-plugin.lo
+  CCLD     libgstamrwbdec.la
+make -C mad
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+  CC       libgstmad_la-gstmad.lo
+make -C x264
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+  CC       libgstx264_la-gstx264enc.lo
+  CCLD     libgstamrnb.la
+  CCLD     libgsta52dec.la
+  CCLD     libgstlame.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+  CCLD     libgstcdio.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+  CCLD     libgstmad.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+  CCLD     libgstx264.la
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+Making all in a52dec
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+Making all in amrnb
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+Making all in amrwbdec
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+Making all in cdio
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+Making all in lame
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+Making all in mad
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+Making all in x264
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+Making all in docs
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+Making all in plugins
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+Making all in m4
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+Making all in tests
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+Making all in check
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+Making all in files
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+Making all in common
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+Making all in m4
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+Making all in pkgconfig
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+  CP     gstreamer-plugins-ugly-1.5-uninstalled.pc
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+Making all in po
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+make gst-plugins-ugly-1.5.pot-update
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+sed -e '/^#/d' remove-potcdate.sin > t-remove-potcdate.sed
+mv t-remove-potcdate.sed remove-potcdate.sed
+if LC_ALL=C grep 'GNU gst-plugins-ugly' ../* 2>/dev/null | grep -v 'libtool:' >/dev/null; then \
+  package_gnu='GNU '; \
+else \
+  package_gnu=''; \
+fi; \
+if test -n 'http://bugzilla.gnome.org/' || test 'http://bugzilla.gnome.org/enter_bug.cgi?product=GStreamer' = '@'PACKAGE_BUGREPORT'@'; then \
+  msgid_bugs_address='http://bugzilla.gnome.org/'; \
+else \
+  msgid_bugs_address='http://bugzilla.gnome.org/enter_bug.cgi?product=GStreamer'; \
+fi; \
+case `/usr/bin/xgettext --version | sed 1q | sed -e 's,^[^0-9]*,,'` in \
+  '' | 0.[0-9] | 0.[0-9].* | 0.1[0-5] | 0.1[0-5].* | 0.16 | 0.16.[0-1]*) \
+    /usr/bin/xgettext --default-domain=gst-plugins-ugly-1.5 --directory=.. \
+      --add-comments=TRANSLATORS: --keyword=_ --keyword=N_  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+  *) \
+    /usr/bin/xgettext --default-domain=gst-plugins-ugly-1.5 --directory=.. \
+      --add-comments=TRANSLATORS: --keyword=_ --keyword=N_  \
+      --files-from=./POTFILES.in \
+      --copyright-holder='' \
+      --package-name="${package_gnu}gst-plugins-ugly" \
+      --package-version='1.8.1.1' \
+      --msgid-bugs-address="$msgid_bugs_address" \
+    ;; \
+esac
+test ! -f gst-plugins-ugly-1.5.po || { \
+  if test -f ./gst-plugins-ugly-1.5.pot; then \
+    sed -f remove-potcdate.sed < ./gst-plugins-ugly-1.5.pot > gst-plugins-ugly-1.5.1po && \
+    sed -f remove-potcdate.sed < gst-plugins-ugly-1.5.po > gst-plugins-ugly-1.5.2po && \
+    if cmp gst-plugins-ugly-1.5.1po gst-plugins-ugly-1.5.2po >/dev/null 2>&1; then \
+      rm -f gst-plugins-ugly-1.5.1po gst-plugins-ugly-1.5.2po gst-plugins-ugly-1.5.po; \
+    else \
+      rm -f gst-plugins-ugly-1.5.1po gst-plugins-ugly-1.5.2po ./gst-plugins-ugly-1.5.pot && \
+      mv gst-plugins-ugly-1.5.po ./gst-plugins-ugly-1.5.pot; \
+    fi; \
+  else \
+    mv gst-plugins-ugly-1.5.po ./gst-plugins-ugly-1.5.pot; \
+  fi; \
+}
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+test ! -f ./gst-plugins-ugly-1.5.pot || \
+  test -z "af.gmo az.gmo bg.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo en_GB.gmo eo.gmo es.gmo eu.gmo fi.gmo fr.gmo gl.gmo hr.gmo hu.gmo id.gmo it.gmo ja.gmo lt.gmo lv.gmo ms.gmo mt.gmo nb.gmo nl.gmo or.gmo pl.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sl.gmo sq.gmo sr.gmo sv.gmo tr.gmo uk.gmo vi.gmo zh_CN.gmo" || make af.gmo az.gmo bg.gmo ca.gmo cs.gmo da.gmo de.gmo el.gmo en_GB.gmo eo.gmo es.gmo eu.gmo fi.gmo fr.gmo gl.gmo hr.gmo hu.gmo id.gmo it.gmo ja.gmo lt.gmo lv.gmo ms.gmo mt.gmo nb.gmo nl.gmo or.gmo pl.gmo pt_BR.gmo ro.gmo ru.gmo sk.gmo sl.gmo sq.gmo sr.gmo sv.gmo tr.gmo uk.gmo vi.gmo zh_CN.gmo
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+msgmerge --no-location --update --backup=off af.po gst-plugins-ugly-1.5.pot
+...... done.
+msgmerge --no-location --update --backup=off az.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off bg.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off ca.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off da.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off cs.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off de.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off el.po gst-plugins-ugly-1.5.pot
+..msgmerge --no-location --update --backup=off en_GB.po gst-plugins-ugly-1.5.pot
+ done.
+.... done.
+...... done.
+.......... done.
+ done.
+.... done.
+ done.
+. done.
+msgmerge --no-location --update --backup=off es.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off eo.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off eu.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off fr.po gst-plugins-ugly-1.5.pot
+.... done.
+.. done.
+....... done.
+..msgmerge --no-location --update --backup=off fi.po gst-plugins-ugly-1.5.pot
+ done.
+msgmerge --no-location --update --backup=off hu.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off hr.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off gl.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off id.po gst-plugins-ugly-1.5.pot
+.. done.
+...... done.
+ done.
+msgmerge --no-location --update --backup=off it.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off lt.po gst-plugins-ugly-1.5.pot
+ done.
+msgmerge --no-location --update --backup=off ja.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off lv.po gst-plugins-ugly-1.5.pot
+..msgmerge --no-location --update --backup=off ms.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off nb.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off mt.po gst-plugins-ugly-1.5.pot
+.... done.
+.. done.
+...... done.
+......... done.
+ done.
+ done.
+ done.
+msgmerge --no-location --update --backup=off nl.po gst-plugins-ugly-1.5.pot
+ done.
+msgmerge --no-location --update --backup=off pt_BR.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off ru.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off or.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off sk.po gst-plugins-ugly-1.5.pot
+..msgmerge --no-location --update --backup=off ro.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off sl.po gst-plugins-ugly-1.5.pot
+.. done.
+..msgmerge --no-location --update --backup=off pl.po gst-plugins-ugly-1.5.pot
+ done.
+.. done.
+ done.
+.... done.
+msgmerge --no-location --update --backup=off sq.po gst-plugins-ugly-1.5.pot
+ done.
+....... done.
+ done.
+..msgmerge --no-location --update --backup=off sr.po gst-plugins-ugly-1.5.pot
+...... done.
+msgmerge --no-location --update --backup=off sv.po gst-plugins-ugly-1.5.pot
+msgmerge --no-location --update --backup=off tr.po gst-plugins-ugly-1.5.pot
+...msgmerge --no-location --update --backup=off uk.po gst-plugins-ugly-1.5.pot
+..... done.
+.msgmerge --no-location --update --backup=off zh_CN.po gst-plugins-ugly-1.5.pot
+. done.
+msgmerge --no-location --update --backup=off vi.po gst-plugins-ugly-1.5.pot
+rm -f af.gmo && /usr/bin/msgfmt -c --statistics -o af.gmo af.po
+.....rm -f az.gmo && /usr/bin/msgfmt -c --statistics -o az.gmo az.po
+ done.
+1 translated message, 4 fuzzy translations, 9 untranslated messages.
+ done.
+..rm -f bg.gmo && /usr/bin/msgfmt -c --statistics -o bg.gmo bg.po
+rm -f ca.gmo && /usr/bin/msgfmt -c --statistics -o ca.gmo ca.po
+ done.
+rm -f cs.gmo && /usr/bin/msgfmt -c --statistics -o cs.gmo cs.po
+14 translated messages.
+1 translated message, 4 fuzzy translations, 9 untranslated messages.
+rm -f da.gmo && /usr/bin/msgfmt -c --statistics -o da.gmo da.po
+14 translated messages.
+14 translated messages.
+rm -f el.gmo && /usr/bin/msgfmt -c --statistics -o el.gmo el.po
+rm -f de.gmo && /usr/bin/msgfmt -c --statistics -o de.gmo de.po
+..13 translated messages, 1 fuzzy translation.
+ done.
+14 translated messagesrm -f en_GB.gmo && /usr/bin/msgfmt -c --statistics -o en_GB.gmo en_GB.po
+.
+13 translated messages, 1 fuzzy translation.
+rm -f eo.gmo && /usr/bin/msgfmt -c --statistics -o eo.gmo eo.po
+rm -f es.gmo && /usr/bin/msgfmt -c --statistics -o es.gmo es.po
+rm -f eu.gmo && /usr/bin/msgfmt -c --statistics -o eu.gmo eu.po
+14 translated messages.
+13 translated messages, 1 fuzzy translation.
+11 translated messages, 2 fuzzy translations, 1 untranslated message.
+rm -f fi.gmo && /usr/bin/msgfmt -c --statistics -o fi.gmo fi.po
+1 translated message, 4 fuzzy translations, 9 untranslated messages.
+11 translated messages, 2 fuzzy translations, 1 untranslated message.
+rm -f gl.gmo && /usr/bin/msgfmt -c --statistics -o gl.gmo gl.po
+rm -f fr.gmo && /usr/bin/msgfmt -c --statistics -o fr.gmo fr.po
+rm -f hr.gmo && /usr/bin/msgfmt -c --statistics -o hr.gmo hr.po
+rm -f id.gmo && /usr/bin/msgfmt -c --statistics -o id.gmo id.po
+rm -f hu.gmo && /usr/bin/msgfmt -c --statistics -o hu.gmo hu.po
+hr.po:6: warning: header field 'Language' still has the initial default value
+13 translated messages, 1 fuzzy translation.
+14 translated messages.
+14 translated messages.
+14 translated messages.
+rm -f it.gmo && /usr/bin/msgfmt -c --statistics -o it.gmo it.po
+rm -f mt.gmo && /usr/bin/msgfmt -c --statistics -o mt.gmo mt.po
+rm -f ms.gmo && /usr/bin/msgfmt -c --statistics -o ms.gmo ms.po
+14 translated messages.
+10 translated messages, 3 fuzzy translations, 1 untranslated message.
+rm -f lv.gmo && /usr/bin/msgfmt -c --statistics -o lv.gmo lv.po
+11 translated messages, 2 fuzzy translations, 1 untranslated message.
+11 translated messages, 2 fuzzy translations, 1 untranslated message.
+14 translated messages.
+rm -f ja.gmo && /usr/bin/msgfmt -c --statistics -o ja.gmo ja.po
+14 translated messages.
+rm -f lt.gmo && /usr/bin/msgfmt -c --statistics -o lt.gmo lt.po
+rm -f pl.gmo && /usr/bin/msgfmt -c --statistics -o pl.gmo pl.po
+6 translated messages, 5 fuzzy translations, 3 untranslated messages.
+rm -f or.gmo && /usr/bin/msgfmt -c --statistics -o or.gmo or.po
+rm -f nb.gmo && /usr/bin/msgfmt -c --statistics -o nb.gmo nb.po
+rm -f nl.gmo && /usr/bin/msgfmt -c --statistics -o nl.gmo nl.po
+rm -f pt_BR.gmo && /usr/bin/msgfmt -c --statistics -o pt_BR.gmo pt_BR.po
+14 translated messages.
+14 translated messages.
+1 translated message, 4 fuzzy translations, 9 untranslated messages.
+14 translated messages.
+14 translated messages.
+rm -f ro.gmo && /usr/bin/msgfmt -c --statistics -o ro.gmo ro.po
+11 translated messages, 2 fuzzy translations, 1 untranslated message.
+rm -f sl.gmo && /usr/bin/msgfmt -c --statistics -o sl.gmo sl.po
+rm -f ru.gmo && /usr/bin/msgfmt -c --statistics -o ru.gmo ru.po
+rm -f sk.gmo && /usr/bin/msgfmt -c --statistics -o sk.gmo sk.po
+14 translated messages.
+14 translated messages.
+rm -f sq.gmo && /usr/bin/msgfmt -c --statistics -o sq.gmo sq.po
+1 translated message, 4 fuzzy translations, 9 untranslated messages.
+rm -f sr.gmo && /usr/bin/msgfmt -c --statistics -o sr.gmo sr.po
+rm -f tr.gmo && /usr/bin/msgfmt -c --statistics -o tr.gmo tr.po
+rm -f sv.gmo && /usr/bin/msgfmt -c --statistics -o sv.gmo sv.po
+14 translated messages.
+14 translated messages.
+14 translated messages.
+14 translated messages.
+rm -f uk.gmo && /usr/bin/msgfmt -c --statistics -o uk.gmo uk.po
+rm -f zh_CN.gmo && /usr/bin/msgfmt -c --statistics -o zh_CN.gmo zh_CN.po
+rm -f vi.gmo && /usr/bin/msgfmt -c --statistics -o vi.gmo vi.po
+14 translated messages.
+14 translated messages.
+14 translated messages.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+touch stamp-po
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.qNPsAq
++ umask 022
++ cd /root/rpmbuild/BUILD
++ '[' /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64 '!=' / ']'
++ rm -rf /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
+++ dirname /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
++ mkdir -p /root/rpmbuild/BUILDROOT
++ mkdir /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
++ cd gst-plugins-ugly-kms6.6.0
++ rm -rf /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
++ /usr/bin/make prefix=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr exec_prefix=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr bindir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/bin sbindir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/sbin sysconfdir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/etc datadir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share includedir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/include libdir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64 libexecdir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/libexec localstatedir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/var sharedstatedir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/var/lib mandir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/man infodir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/info install
+Making install in gst-libs
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+Making install in gst
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs/gst'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst-libs'
+Making install in gst
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+Making install in asfdemux
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstasf.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstasf.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstasf.so
+libtool: install: /usr/bin/install -c .libs/libgstasf.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstasf.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/asfdemux'
+Making install in dvdlpcmdec
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstdvdlpcmdec.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstdvdlpcmdec.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdlpcmdec.so
+libtool: install: /usr/bin/install -c .libs/libgstdvdlpcmdec.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdlpcmdec.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdlpcmdec'
+Making install in dvdsub
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstdvdsub.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstdvdsub.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdsub.so
+libtool: install: /usr/bin/install -c .libs/libgstdvdsub.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdsub.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/dvdsub'
+Making install in xingmux
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstxingmux.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstxingmux.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstxingmux.so
+libtool: install: /usr/bin/install -c .libs/libgstxingmux.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstxingmux.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/xingmux'
+Making install in realmedia
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstrmdemux.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstrmdemux.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstrmdemux.so
+libtool: install: /usr/bin/install -c .libs/libgstrmdemux.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstrmdemux.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst/realmedia'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/gst'
+Making install in ext
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+Making install in a52dec
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgsta52dec.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgsta52dec.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgsta52dec.so
+libtool: install: /usr/bin/install -c .libs/libgsta52dec.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgsta52dec.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/a52dec'
+Making install in amrnb
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstamrnb.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstamrnb.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrnb.so
+libtool: install: /usr/bin/install -c .libs/libgstamrnb.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrnb.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gstreamer-1.5/presets'
+ /usr/bin/install -c -m 644 GstAmrnbEnc.prs '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gstreamer-1.5/presets'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrnb'
+Making install in amrwbdec
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstamrwbdec.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstamrwbdec.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrwbdec.so
+libtool: install: /usr/bin/install -c .libs/libgstamrwbdec.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrwbdec.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/amrwbdec'
+Making install in cdio
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstcdio.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstcdio.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstcdio.so
+libtool: install: /usr/bin/install -c .libs/libgstcdio.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstcdio.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/cdio'
+Making install in lame
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstlame.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstlame.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstlame.so
+libtool: install: /usr/bin/install -c .libs/libgstlame.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstlame.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/lame'
+Making install in mad
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstmad.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstmad.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstmad.so
+libtool: install: /usr/bin/install -c .libs/libgstmad.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstmad.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/mad'
+Making install in x264
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libgstx264.la '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5'
+libtool: install: /usr/bin/install -c .libs/libgstx264.so /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstx264.so
+libtool: install: /usr/bin/install -c .libs/libgstx264.lai /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstx264.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64/gstreamer-1.5'
+ /usr/bin/mkdir -p '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gstreamer-1.5/presets'
+ /usr/bin/install -c -m 644 GstX264Enc.prs '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gstreamer-1.5/presets'
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext/x264'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/ext'
+Making install in docs
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+Making install in plugins
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[3]: Nothing to be done for `install-exec-am'.
+(installfiles=`echo ./html/*.sgml ./html/*.html ./html/*.png ./html/*.css`; \
+if test "$installfiles" = './html/*.sgml ./html/*.html ./html/*.png ./html/*.css'; \
+then echo '-- Nothing to install' ; \
+else \
+  /bin/sh /root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/install-sh -d /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gtk-doc/html/gst-plugins-ugly-plugins-1.5; \
+  for i in $installfiles; do \
+    echo '-- Installing '$i ; \
+    /usr/bin/install -c -m 644 $i /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gtk-doc/html/gst-plugins-ugly-plugins-1.5; \
+  done; \
+  pngfiles=`echo ./html/*.png`; \
+  if test "$pngfiles" != './html/*.png'; then \
+    for i in $pngfiles; do \
+      echo '-- Installing '$i ; \
+      /usr/bin/install -c -m 644 $i /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gtk-doc/html/gst-plugins-ugly-plugins-1.5; \
+    done; \
+  fi; \
+  echo '-- Installing ./html/gst-plugins-ugly-plugins-1.5.devhelp2' ; \
+  if test -e ./html/gst-plugins-ugly-plugins-1.5.devhelp2; then \
+            /usr/bin/install -c -m 644 ./html/gst-plugins-ugly-plugins-1.5.devhelp2 \
+            /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gtk-doc/html/gst-plugins-ugly-plugins-1.5/gst-plugins-ugly-plugins-1.5.devhelp2; \
+  fi; \
+  /usr/bin/gtkdoc-rebase --relative --dest-dir= --html-dir=/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gtk-doc/html/gst-plugins-ugly-plugins-1.5 || true ; \
+fi)
+-- Nothing to install
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs/plugins'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/docs'
+Making install in m4
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/m4'
+Making install in tests
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+Making install in check
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/check'
+Making install in files
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests/files'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/tests'
+Making install in common
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+Making install in m4
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common/m4'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[3]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/common'
+Making install in pkgconfig
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/pkgconfig'
+Making install in po
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+/usr/bin/mkdir -p /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share
+installing af.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/af/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing az.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/az/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing bg.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/bg/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing ca.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/ca/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing cs.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/cs/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing da.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/da/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing de.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/de/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing el.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/el/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing en_GB.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/en_GB/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing eo.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/eo/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing es.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/es/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing eu.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/eu/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing fi.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/fi/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing fr.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/fr/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing gl.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/gl/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing hr.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/hr/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing hu.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/hu/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing id.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/id/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing it.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/it/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing ja.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/ja/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing lt.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/lt/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing lv.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/lv/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing ms.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/ms/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing mt.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/mt/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing nb.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/nb/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing nl.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/nl/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing or.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/or/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing pl.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/pl/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing pt_BR.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/pt_BR/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing ro.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/ro/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing ru.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/ru/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing sk.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/sk/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing sl.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/sl/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing sq.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/sq/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing sr.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/sr/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing sv.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/sv/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing tr.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/tr/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing uk.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/uk/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing vi.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/vi/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+installing zh_CN.gmo as /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/locale/zh_CN/LC_MESSAGES/gst-plugins-ugly-1.5.mo
+if test "gst-plugins-ugly" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0/po'
+make[1]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+make[2]: Entering directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
+make[1]: Leaving directory `/root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0'
++ rm -f /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgsta52dec.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrnb.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrwbdec.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstasf.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstcdio.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdlpcmdec.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdsub.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstlame.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstmad.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstrmdemux.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstx264.la /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstxingmux.la
++ rm -f '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/*.a'
++ rm -f '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/*.a'
++ rm -f '/root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/*.la'
++ /usr/lib/rpm/find-lang.sh /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64 gst-plugins-ugly-1.5
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /root/rpmbuild/BUILD/gst-plugins-ugly-kms6.6.0
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstasf.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdlpcmdec.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstdvdsub.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstxingmux.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstrmdemux.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgsta52dec.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrnb.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstamrwbdec.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstcdio.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstlame.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstmad.so
+extracting debug info from /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64/usr/lib64/gstreamer-1.5/libgstx264.so
+/usr/lib/rpm/sepdebugcrcfix: Updated 12 CRC32s, 0 CRC32s did match.
+1642 blocks
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
+Provides: kms-gstreamer1-plugins-ugly = 1.8.1.1-1 kms-gstreamer1-plugins-ugly(x86-64) = 1.8.1.1-1 libgsta52dec.so()(64bit) libgstamrnb.so()(64bit) libgstamrwbdec.so()(64bit) libgstasf.so()(64bit) libgstcdio.so()(64bit) libgstdvdlpcmdec.so()(64bit) libgstdvdsub.so()(64bit) libgstlame.so()(64bit) libgstmad.so()(64bit) libgstrmdemux.so()(64bit) libgstx264.so()(64bit) libgstxingmux.so()(64bit)
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: liba52.so.0()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libc.so.6(GLIBC_2.7)(64bit) libcdio.so.15()(64bit) libcdio.so.15(CDIO_15)(64bit) libglib-2.0.so.0()(64bit) libgobject-2.0.so.0()(64bit) libgstaudio-1.5.so.0()(64bit) libgstbase-1.5.so.0()(64bit) libgstpbutils-1.5.so.0()(64bit) libgstreamer-1.5.so.0()(64bit) libgstriff-1.5.so.0()(64bit) libgstrtp-1.5.so.0()(64bit) libgstrtsp-1.5.so.0()(64bit) libgstsdp-1.5.so.0()(64bit) libgsttag-1.5.so.0()(64bit) libgstvideo-1.5.so.0()(64bit) libm.so.6()(64bit) libmad.so.0()(64bit) libmp3lame.so.0()(64bit) libopencore-amrnb.so.0()(64bit) libopencore-amrwb.so.0()(64bit) liborc-0.4.so.0()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libx264.so.148()(64bit) rtld(GNU_HASH)
+Conflicts: gstreamer1-plugins-ugly
+Processing files: kms-gstreamer1-plugins-ugly-debuginfo-1.8.1.1-1.x86_64
+Provides: kms-gstreamer1-plugins-ugly-debuginfo = 1.8.1.1-1 kms-gstreamer1-plugins-ugly-debuginfo(x86-64) = 1.8.1.1-1
+Requires(rpmlib): rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1 rpmlib(CompressedFileNames) <= 3.0.4-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
+Wrote: /root/rpmbuild/RPMS/x86_64/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64.rpm
+Wrote: /root/rpmbuild/RPMS/x86_64/kms-gstreamer1-plugins-ugly-debuginfo-1.8.1.1-1.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.XkLhHN
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd gst-plugins-ugly-kms6.6.0
++ rm -rf /root/rpmbuild/BUILDROOT/kms-gstreamer1-plugins-ugly-1.8.1.1-1.x86_64
++ exit 0
