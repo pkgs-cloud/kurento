@@ -10,7 +10,7 @@ RPM packages for RHEL / CentOS 7
 ##### Install Kurento RPM packages with required dependencies
 
 1. Install [**pkgs.cloud** release repository](https://github.com/pkgs-cloud/release)
-2. `yum install kurento-release -y`
+2. `yum install kurento-release epel-release -y`
 3. `yum install kms -y`
 
 ##### List all available packages
